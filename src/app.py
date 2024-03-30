@@ -1,5 +1,5 @@
 from flask import Flask, request
-from flask_restx import Api, Resource
+from flask_restx import Api, Resource, fields
 
 from utils import *
 
@@ -29,6 +29,13 @@ api = Api(app, version="1.0", title="API Title", description="A simple API")
 ns = api.namespace("API", description="API Routes")
 
 
+# Define the model for your project data
+project_model = api.model(
+    "project",
+    {},
+)
+
+
 @ns.route("/")
 class HelloWorld(Resource):
     def get(self):
@@ -43,9 +50,11 @@ class Projects(Resource):
         projects = fileReader("data/projects.json")
         return projects
 
+    @api.expect(project_model)
     def post(self):
-        content = request.json
-        fileWriter("data/projects.json", content)
+        content = request.get_data(as_text=True)
+        return content
+        # fileWriter("data/projects.json", content)
 
 
 @ns.route("/projects/<int:id>")
