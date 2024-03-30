@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-           <h1>Home Page</h1> 
+           {/* <h1>Home Page</h1>  */}
            <Routes>
             <Route path = '/addproject' element = {<AddProject/>}/>
           </Routes>
