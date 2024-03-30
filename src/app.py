@@ -5,7 +5,8 @@ from flask_restx import Api, Resource, fields
 from utils import *
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins="*")
+
 api = Api(app, version="1.0", title="API Title", description="A simple API")
 
 ns = api.namespace("API", description="API Routes")
@@ -62,17 +63,6 @@ class Apply(Resource):
         else:
             api.abort(404, f"Project {id} not found")
 
-
-# @ns.route("/login")
-# class Login(Resource):
-#     def get(self):
-#         """Redirects to the Auth0 login page"""
-#         auth0 = oauth.create_client("auth0")
-#         return auth0.authorize_redirect(redirect_uri="http://localhost:5000/callback")
-
-#     def post(self):
-#         """Returns 'Hello, World!'"""
-#         return {"hello": "world"}
 
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=False)
