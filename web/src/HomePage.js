@@ -15,7 +15,7 @@ export default function HomePage() {
         to open source projects, but that can be lonely.
       </h3>
       {/* <img
-        src="https://w7.pngwing.com/pngs/202/923/png-transparent-people-human-circle-ring-connection.png"
+        src="https://png.pngtree.com/png-vector/20190611/ourmid/pngtree-icon-people-group-icon-people-network-connection-people-png-image_1495036.png"
         alt="Stressful job search"
         width="400"
         height="200"
