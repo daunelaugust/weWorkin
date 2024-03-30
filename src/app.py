@@ -73,15 +73,13 @@ ns.route("/apply")
 class Apply(Resource):
     
     def post(self):
-
-        project_id = request.json.get("id") 
-        project_route = ProjectById()
-        project = project_route.get(id=project_id)
-
+        project_id = request.json.get("<int:id>") 
+        projects = fileReader("data/projects.json")
+        project = next((proj for proj in projects if proj["id"] == project_id), None)
         if project:
             fileWriter("data/myprojects.json", project)
         else:
-             api.abort(404, f"Project {project_id} not found")
+            api.abort(404, f"Project {id} not found")
 
 
 
