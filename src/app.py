@@ -12,19 +12,19 @@ ns = api.namespace("API", description="API Routes")
 app = Flask(__name__)
 api = Api(app, version="1.0", title="API Title", description="A simple API")
 
-oauth = OAuth(app)
+# oauth = OAuth(app)
 
-auth0 = oauth.register(
-    "auth0",
-    client_id=os.environ.get("AUTH0_CLIENT_ID"),
-    client_secret=os.environ.get("AUTH0_CLIENT_SECRET"),
-    api_base_url="https://YOUR_DOMAIN",
-    access_token_url="https://YOUR_DOMAIN/oauth/token",
-    authorize_url="https://YOUR_DOMAIN/authorize",
-    client_kwargs={
-        "scope": "openid profile email",
-    },
-)
+# auth0 = oauth.register(
+#     "auth0",
+#     client_id=os.environ.get("AUTH0_CLIENT_ID"),
+#     client_secret=os.environ.get("AUTH0_CLIENT_SECRET"),
+#     api_base_url="https://YOUR_DOMAIN",
+#     access_token_url="https://YOUR_DOMAIN/oauth/token",
+#     authorize_url="https://YOUR_DOMAIN/authorize",
+#     client_kwargs={
+#         "scope": "openid profile email",
+#     },
+# )
 
 ns = api.namespace("API", description="API Routes")
 
@@ -60,16 +60,16 @@ class ProjectById(Resource):
             api.abort(404, f"Project {id} not found")
 
 
-@ns.route("/login")
-class Login(Resource):
-    def get(self):
-        """Redirects to the Auth0 login page"""
-        auth0 = oauth.create_client("auth0")
-        return auth0.authorize_redirect(redirect_uri="http://localhost:5000/callback")
+# @ns.route("/login")
+# class Login(Resource):
+#     def get(self):
+#         """Redirects to the Auth0 login page"""
+#         auth0 = oauth.create_client("auth0")
+#         return auth0.authorize_redirect(redirect_uri="http://localhost:5000/callback")
 
-    def post(self):
-        """Returns 'Hello, World!'"""
-        return {"hello": "world"}
+#     def post(self):
+#         """Returns 'Hello, World!'"""
+#         return {"hello": "world"}
 
 
 if __name__ == "__main__":
