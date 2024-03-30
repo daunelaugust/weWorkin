@@ -47,7 +47,15 @@
   padding: 14px 16px;
 }
 
+#link_list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
 ul {
   display: flex;
   text-align: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
