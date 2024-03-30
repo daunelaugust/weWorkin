@@ -1,0 +1,27 @@
+#addProj{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+#addProjectForm{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: space-around;
+    width: 50dvw;
+    height: 45dvh;
+}
+.inputs{
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 5dvh;
+    overflow-y: auto;
+}
+
+#projectInfo{
+ height: 25%;
+}
+
+input:hover{
+    border: 1px solid green;
+}
