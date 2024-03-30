@@ -7,16 +7,16 @@ import HomePage from "./HomePage.js"; // Import the HomePage component
 function App() {
   return (
     <div className="App">
-      <nav>
-        <ul>
+      <nav className="topnav">
+        <ul style={{ listStyleType: "none", padding: 0 }}>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/"> Home </Link>
           </li>
           <li>
-            <Link to="/AddProject">Add Project</Link>
+            <Link to="/AddProject"> Add Project </Link>
           </li>
           <li>
-            <Link to="/Projects.js">Search Projects</Link>
+            <Link to="/Projects"> Search Projects </Link>
           </li>
         </ul>
       </nav>

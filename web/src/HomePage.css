@@ -6,24 +6,30 @@ body {
   color: white;
 }
 
-.container {
-  padding: 20px;
-}
-
-.container h1 {
+h1 {
   font-size: 32px;
   margin-bottom: 20px;
 }
 
-.container h2 {
+h2 {
   font-size: 24px;
   margin-top: 20px;
   margin-bottom: 10px;
   display: flex; /* Use Flexbox */
+  text-align: left;
 }
 
-.container p {
+p {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 20px;
+}
+
+.start_here {
+  display: flex;
+  padding: 10;
+}
+
+.user_flow {
+  text-align: left;
 }

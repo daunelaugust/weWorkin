@@ -19,16 +19,22 @@ export default function HomePage() {
         height="200"
       />
       <h1> Start your journey below </h1>
-      <h2>I need dev hours on a project</h2>
-      <p>
-        You’re a project lead! You should sign up here to read expectations for
-        a project lead and log your project{" "}
-      </p>
-      <h2>I want to contribute code to a project!</h2>
-      <p>
-        Great. You're an apprentice. You should search our projects to match
-        your needs
-      </p>
+      <div className="start_here">
+        <div className="user_flow">
+          <h2>I need dev hours on a project</h2>
+          <p>
+            You’re a project lead! You should sign up here to read expectations
+            for a project lead and log your project{" "}
+          </p>
+        </div>
+        <div>
+          <h2>I want to contribute code to a project!</h2>
+          <p>
+            Great, you're an apprentice! You should search our projects to match
+            your needs
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
