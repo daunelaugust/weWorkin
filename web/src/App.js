@@ -1,11 +1,25 @@
 import "./App.css";
 import AddProject from "./AddProjects/AddProject.jsx";
 import { Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import HomePage from "./HomePage.js"; // Import the HomePage component
 
 function App() {
   return (
     <div className="App">
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/AddProject.jsx">Add Project</Link>
+          </li>
+          <li>
+            <Link to="/Projects.js">Search Projects</Link>
+          </li>
+        </ul>
+      </nav>
       <Routes>
         <Route path="/" element={<HomePage />} />{" "}
         {/* Render HomePage component for the "/" route */}
