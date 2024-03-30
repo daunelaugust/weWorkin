@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Project Y",
+    "description": "An innovative solution for data analysis",
+    "languages": ["Python"],
+    "frameworks": ["Django", "React"],
+    "databases": ["PostgreSQL"],
+    "deployment": ["Docker", "Kubernetes"],
+    "collaborators": 3,
+    "status": "active",
+    "dateAdded": "2024-03-29"
+  }
+]

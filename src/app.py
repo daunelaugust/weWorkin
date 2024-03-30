@@ -25,12 +25,6 @@ class Projects(Resource):
         return {"hello": "world"}
 
 
-
-
-
-
-
-
 @ns.route("/login")
 class Login(Resource):
     def get(self):
