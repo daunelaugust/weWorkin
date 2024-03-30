@@ -3,7 +3,7 @@ import AddProject from "./AddProjects/AddProject.jsx";
 import { Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import HomePage from "./HomePage.js"; // Import the HomePage component
-import LoginPage from './pages/LoginPage.jsx';
+import LoginPage from './pages/LoginPage.js';
 
 function App() {
   return (
