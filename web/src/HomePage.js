@@ -7,11 +7,12 @@ import { Link } from "react-router-dom"; // Import Link from react-router-dom
 export default function HomePage() {
   return (
     <div>
-      <h1>Welcome to weWorkin!</h1>
+      <h1>Welcome to weWorkin</h1>
       <h3>
         {" "}
         We know searching for engineering jobs is stressful because employers
-        are expect you to have projects beyond school projects.
+        expect you to have projects beyond school projects. Yes, you could
+        contribute to open source projects, but that can be lonely.
       </h3>
       <img
         src="https://news.fordham.edu/wp-content/uploads/2021/01/Student-Stress.jpg"
@@ -21,19 +22,24 @@ export default function HomePage() {
       />
       <h1> Start your journey below </h1>
       <div className="start_here">
-        <div className="user_flow">
+        <div className="box">
           <h2>I need dev hours on a project</h2>
           <p>
             You’re a project lead! You should sign up{" "}
-            <Link to="/AddProject">here </Link>to read expectations for a
-            project lead and log your project{" "}
+            <Link to="/AddProject" style={{ color: "white" }}>
+              here
+            </Link>{" "}
+            to read expectations for a project lead and log your project{" "}
           </p>
         </div>
-        <div>
-          <h2>I want to contribute code to a project!</h2>
+        <div className="box">
+          <h2>I want to contribute code to a project</h2>
           <p>
-            Great, you're an apprentice! You should search our projects to match
-            your needs
+            You're an apprentice! You should search{" "}
+            <Link to="/Projects" style={{ color: "white" }}>
+              our projects{" "}
+            </Link>{" "}
+            to match your needs
           </p>
         </div>
       </div>

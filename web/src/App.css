@@ -57,5 +57,8 @@ ul {
   display: flex;
   text-align: center;
   flex-flow: row nowrap;
+  padding: 20px;
   justify-content: space-between;
+  font-family: Gill Sans, sans-serif;
+  margin: 0 10px;
 }
