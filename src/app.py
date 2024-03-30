@@ -25,5 +25,22 @@ class Projects(Resource):
         return {"hello": "world"}
 
 
+
+
+
+
+
+
+@ns.route("/login")
+class Login(Resource):
+    def get(self):
+        """Returns 'Hello, World!'"""
+        return {"hello": "world"}
+
+    def post(self):
+        """Returns 'Hello, World!'"""
+        return {"hello": "world"}
+
+
 if __name__ == "__main__":
     app.run(debug=True)
