@@ -69,7 +69,10 @@ class ProjectById(Resource):
         else:
             api.abort(404, f"Project {id} not found")
 
+
 ns.route("/apply")
+
+
 class Apply(Resource):
     
     def post(self):
@@ -82,9 +85,6 @@ class Apply(Resource):
             api.abort(404, f"Project {id} not found")
 
 
-
-        
-        
 
 
 # @ns.route("/login")
