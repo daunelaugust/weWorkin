@@ -7,6 +7,7 @@ export default function AddProject() {
   const[projType, setProjType] = useState('')
   const[projHours, setProjHours] = useState('')
   const[projLang, setProjLang] = useState('')
+  const addURL = `https://5e39-173-220-39-122.ngrok-free.app/projects`
   // const[formData, setFormdata] = useState({
   //   projName,
   //   projinfo,
@@ -30,6 +31,15 @@ export default function AddProject() {
     }
 
     try{
+      const response = await fetch (addURL, {
+        method: 'post',
+        // mode: 'cors',
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData)
+      })
+      console.log(response)
     }catch(error){console.log(error.message)}
     console.log(formData)
   }
