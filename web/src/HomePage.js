@@ -5,15 +5,16 @@ import React from "react";
 export default function HomePage() {
   return (
     <div>
-      <h1>Welcome to the Home Page</h1>
-      <p>This is the content of the home page.</p>
-      <nav>
+      <h1>Welcome to weWorkin! Start your journey below</h1>
+      <h2>I need dev hours on a project:</h2>
+      <h2>I want to contribute code to a project!</h2>
+      {/* <nav>
         <ul>
           <li>
             <a href="/other-page">Go to Other Page</a>
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </div>
   );
 }
