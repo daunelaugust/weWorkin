@@ -7,8 +7,16 @@ body {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 45px;
   margin-bottom: 20px;
+  font-family: Gill Sans, sans-serif;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-family: Gill Sans, sans-serif;
+  padding: 10px;
 }
 
 h2 {
@@ -16,20 +24,28 @@ h2 {
   margin-top: 20px;
   margin-bottom: 10px;
   display: flex; /* Use Flexbox */
-  text-align: left;
+  text-align: center;
 }
 
 p {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .start_here {
-  display: flex;
-  padding: 10;
+  display: flex; /* Use flexbox to align items horizontally */
+  justify-content: space-between; /* Add space between the boxes */
 }
 
-.user_flow {
-  text-align: left;
+.box {
+  width: calc(50% - 10px); /* Set width to half of the container with spacing */
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+Link {
+  color: white;
 }
