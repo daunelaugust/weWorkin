@@ -6,7 +6,7 @@ import os
 def fileReader(filename):
     if filename:
         with open(filename, "r") as f:
-            content = f.readlines
+            content = json.loads(f.read())
             return content
     else:
         print("Invalid File Name")
