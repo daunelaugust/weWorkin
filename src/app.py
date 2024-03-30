@@ -64,16 +64,5 @@ class Apply(Resource):
             api.abort(404, f"Project {id} not found")
 
 
-# @ns.route("/login")
-# class Login(Resource):
-#     def get(self):
-#         """Redirects to the Auth0 login page"""
-#         auth0 = oauth.create_client("auth0")
-#         return auth0.authorize_redirect(redirect_uri="http://localhost:5000/callback")
-
-#     def post(self):
-#         """Returns 'Hello, World!'"""
-#         return {"hello": "world"}
-
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=False)
