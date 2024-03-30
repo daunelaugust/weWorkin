@@ -71,7 +71,6 @@ class ProjectById(Resource):
 
 ns.route("/apply")
 class Apply(Resource):
-    
     def post(self):
         project_id = request.json.get("<int:id>") 
         projects = fileReader("data/projects.json")
