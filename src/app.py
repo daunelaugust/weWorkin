@@ -48,6 +48,18 @@ class Projects(Resource):
         fileWriter("data/projects.json", content)
 
 
+@ns.route("/projects/<int:id>")
+class ProjectById(Resource):
+    def get(self, id):
+        """Returns a single project by its ID"""
+        projects = fileReader("data/projects.json")
+        project = next((proj for proj in projects if proj["id"] == id), None)
+        if project:
+            return project
+        else:
+            api.abort(404, f"Project {id} not found")
+
+
 @ns.route("/login")
 class Login(Resource):
     def get(self):

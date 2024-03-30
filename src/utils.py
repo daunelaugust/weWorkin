@@ -1,18 +1,16 @@
 import json
 import os
 
-# read a f projects.json
+
+# read a file projects.json
 def fileReader(filename):
-    if (filename):
-        with open(filename,'r') as f:
-            if filename.endswith('.json'):
-                content = json.load(f)  
-                return content
-            else:
-                content = f.readlines
-                return content
+    if filename:
+        with open(filename, "r") as f:
+            content = f.readlines
+            return content
     else:
         print("Invalid File Name")
+    return []
 
 
 # edits a f
