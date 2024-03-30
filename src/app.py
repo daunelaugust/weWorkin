@@ -71,11 +71,19 @@ class ProjectById(Resource):
 
 ns.route("/apply")
 class Apply(Resource):
-    @api.expect(json_model)
+    
     def post(self):
-        content = request.json
-        fileWriter("data/myprojects.json", content)
-        return {"status": "success"}
+
+        project_id = request.json.get("id") 
+        project_route = ProjectById()
+        project = project_route.get(id=project_id)
+
+        if project:
+            fileWriter("data/myprojects.json", project)
+        else:
+             api.abort(404, f"Project {project_id} not found")
+
+
 
         
         
