@@ -1,7 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
+    source-sans-pro, sans-serif;
+  font-weight: normal;
   background-color: rgb(4, 4, 38);
   color: white;
 }
@@ -9,13 +11,18 @@ body {
 h1 {
   font-size: 45px;
   margin-bottom: 20px;
-  font-family: Gill Sans, sans-serif;
+  font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro,
+    sans-serif;
+  font-weight: normal;
+  padding: 20x;
 }
 
 h3 {
   font-size: 20px;
   margin-bottom: 20px;
-  font-family: Gill Sans, sans-serif;
+  font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro,
+    sans-serif;
+  display: flex;
   padding: 10px;
 }
 
@@ -25,6 +32,8 @@ h2 {
   margin-bottom: 10px;
   display: flex; /* Use Flexbox */
   text-align: center;
+  font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro,
+    sans-serif;
 }
 
 p {
@@ -37,6 +46,8 @@ p {
 .start_here {
   display: flex; /* Use flexbox to align items horizontally */
   justify-content: space-between; /* Add space between the boxes */
+  text-align: center;
+  padding: 50px;
 }
 
 .box {
@@ -44,6 +55,9 @@ p {
   padding: 20px;
   border: 1px solid #ccc;
   box-sizing: border-box; /* Include padding and border in the width calculation */
+  font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro,
+    sans-serif;
+  text-align: center;
 }
 
 Link {

@@ -10,16 +10,16 @@ export default function HomePage() {
       <h1>Welcome to weWorkin</h1>
       <h3>
         {" "}
-        We know searching for engineering jobs is stressful because employers
-        expect you to have projects beyond school projects. Yes, you could
-        contribute to open source projects, but that can be lonely.
+        We know searching for engineering jobs is stressful. Employers expect
+        you to have projects beyond school projects. Yes, you could contribute
+        to open source projects, but that can be lonely.
       </h3>
-      <img
-        src="https://news.fordham.edu/wp-content/uploads/2021/01/Student-Stress.jpg"
+      {/* <img
+        src="https://w7.pngwing.com/pngs/202/923/png-transparent-people-human-circle-ring-connection.png"
         alt="Stressful job search"
         width="400"
         height="200"
-      />
+      /> */}
       <h1> Start your journey below </h1>
       <div className="start_here">
         <div className="box">
