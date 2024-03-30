@@ -1,6 +1,8 @@
 from flask import Flask
 from flask_restx import Api, Resource
 
+from utils import *
+
 app = Flask(__name__)
 api = Api(app, version="1.0", title="API Title", description="A simple API")
 
@@ -17,12 +19,11 @@ class HelloWorld(Resource):
 @ns.route("/projects")
 class Projects(Resource):
     def get(self):
-        """Returns 'Hello, World!'"""
-        return {"hello": "world"}
+        projects = fileReader("data/projects.json")
+        return projects
 
     def post(self):
-        """Returns 'Hello, World!'"""
-        return {"hello": "world"}
+        fileReader("data/projects.json", self)
 
 
 @ns.route("/login")
@@ -37,4 +38,4 @@ class Login(Resource):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, use_reloader=False)
