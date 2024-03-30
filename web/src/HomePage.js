@@ -7,6 +7,17 @@ export default function HomePage() {
   return (
     <div>
       <h1>Welcome to weWorkin!</h1>
+      <h3>
+        {" "}
+        We know searching for engineering jobs is stressful. Employers are
+        starting to expect you to have projects beyond school projects.
+      </h3>
+      <img
+        src="https://news.fordham.edu/wp-content/uploads/2021/01/Student-Stress.jpg"
+        alt="Stressful job search"
+        width="400"
+        height="200"
+      />
       <h1> Start your journey below </h1>
       <h2>I need dev hours on a project</h2>
       <p>

@@ -13,7 +13,7 @@ function App() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/AddProject.jsx">Add Project</Link>
+            <Link to="/AddProject">Add Project</Link>
           </li>
           <li>
             <Link to="/Projects.js">Search Projects</Link>

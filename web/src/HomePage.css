@@ -19,20 +19,11 @@ body {
   font-size: 24px;
   margin-top: 20px;
   margin-bottom: 10px;
+  display: flex; /* Use Flexbox */
 }
 
 .container p {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 20px;
-}
-
-/* Use Flexbox to display h2 elements side by side */
-.container .h2-container {
-  display: flex; /* Use Flexbox */
-  justify-content: space-between; /* Distribute space between h2 elements */
-}
-
-.container h2 {
-  flex-basis: 48%; /* Set width for h2 elements */
 }
