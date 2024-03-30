@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import request
 from flask_restx import Api, Resource
 
 from utils import *
@@ -37,12 +38,14 @@ class HelloWorld(Resource):
 
 @ns.route("/projects")
 class Projects(Resource):
+        
     def get(self):
         projects = fileReader("data/projects.json")
         return projects
 
     def post(self):
-        fileReader("data/projects.json", self)
+        content = request.json 
+        fileWriter("data/projects.json", content)
 
 
 @ns.route("/login")
