@@ -60,6 +60,7 @@ class Apply(Resource):
         project = next((proj for proj in projects if proj["id"] == id), None)
         if project:
             fileWriter("data/myprojects.json", project)
+            return {"status": "success"}
         else:
             api.abort(404, f"Project {id} not found")
 
