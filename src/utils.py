@@ -1,40 +1,30 @@
 import json
+import os
 
-# read a file projects.json
+# read a f projects.json
 def fileReader(filename):
     if (filename):
         with open(filename,'r') as f:
-            content = f.readlines
-            return content
+            if filename.endswith('.json'):
+                content = json.load(f)  
+                return content
+            else:
+                content = f.readlines
+                return content
     else:
         print("Invalid File Name")
 
 
-# edits a file
+# edits a f
 def fileWriter(filename, content):
-    if content:
-        with open(filename, 'w+') as f:
-            if isinstance(content, str):
-                f.write(content)
-            elif filename.endswith('.json'):
-                json.dump(content, f, indent=4)
-            else:
-                print("Invalid content")
+    if filename and content:
+        # Read the existing JSON data from the f
+        with open(filename, 'r') as f:
+            data = json.load(f)
+    
+        data.append(content)
+    
+        with open(filename, 'w') as f:
+            json.dump(data, f, indent=4)
     else:
-        print("Invalid content")
-
-
-def main():
-    # Test fileReader functionls
-    print("Reading file projects.json:")
-    file_content = fileReader("data/projects.json")
-    print(file_content)
-
-    # # Test fileWriter function
-    # print("\nWriting to file test.json:")
-    # new_content = {"key": "value"}
-    # fileWriter("test.json", new_content)
-    # print("Data written successfully.")
-
-if __name__ == "__main__":
-    main()
+        print("Invalid filename or content")
