@@ -5,7 +5,8 @@ from flask_restx import Api, Resource, fields
 from utils import *
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins="*")
+
 api = Api(app, version="1.0", title="API Title", description="A simple API")
 
 ns = api.namespace("API", description="API Routes")
