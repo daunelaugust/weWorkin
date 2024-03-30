@@ -1,14 +1,38 @@
 [
   {
     "id": 1,
-    "name": "Project X",
-    "description": "An innovative solution for data analysis",
-    "languages": ["Python"],
-    "frameworks": ["Django", "React"],
-    "databases": ["PostgreSQL"],
-    "deployment": ["Docker", "Kubernetes"],
+    "name": "weWorkin",
+    "description": "An innovative solution for work experience apprenticeships",
+    "languages": ["Python", "JavaScript"],
+    "frameworks": ["Flask", "Swagger", "React"],
+    "databases": ["sqlLite"],
+    "deployment": ["Docker"],
     "collaborators": 3,
     "status": "active",
+    "dateAdded": "2024-03-29"
+  },
+  {
+    "id": 2,
+    "name": "CodeStream",
+    "description": "A real-time code collaboration tool for developers",
+    "languages": ["TypeScript", "Python"],
+    "frameworks": ["Express", "Angular", "Socket.IO"],
+    "databases": ["MongoDB"],
+    "deployment": ["Kubernetes", "AWS"],
+    "collaborators": 5,
+    "status": "in development",
+    "dateAdded": "2024-03-30"
+  },
+  {
+    "id": 3,
+    "name": "HealthTrack",
+    "description": "A comprehensive platform for tracking and improving personal health metrics",
+    "languages": ["Kotlin", "Swift"],
+    "frameworks": ["Spring Boot", "UIKit"],
+    "databases": ["PostgreSQL"],
+    "deployment": ["Kubernetes", "AWS"],
+    "collaborators": 5,
+    "status": "in development",
     "dateAdded": "2024-03-29"
   }
 ]
