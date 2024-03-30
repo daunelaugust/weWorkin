@@ -7,9 +7,20 @@ api = Api(app, version="1.0", title="API Title", description="A simple API")
 ns = api.namespace("API", description="API Routes")
 
 
-@ns.route("/hello")
+@ns.route("/")
 class HelloWorld(Resource):
     def get(self):
+        """Returns 'Hello, World!'"""
+        return {"hello": "world"}
+
+
+@ns.route("/projects")
+class Projects(Resource):
+    def get(self):
+        """Returns 'Hello, World!'"""
+        return {"hello": "world"}
+
+    def post(self):
         """Returns 'Hello, World!'"""
         return {"hello": "world"}
 
