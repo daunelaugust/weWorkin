@@ -40,7 +40,7 @@ export default function AddProject() {
         },
         body: JSON.stringify(formData)
       })
-      console.log(response)
+console.log(response)
     }catch(error){console.log(error.message)}
     console.log(formData)
   }
@@ -49,14 +49,11 @@ export default function AddProject() {
     <div id='addProj'>
         <h1>Add Project Page</h1>
         <form id='addProjectForm' name="addProject">
-            {/* <label htmlFor='projectName'>ProjectName</label> */}
             <input className='inputs' type='text' id='projectName' placeholder='project Name' value={projName} onChange={(e)=>{setProjName(prev => prev = e.target.value)}}/>
             <textarea className = 'inputs' rows='5' type='text' id='projectInfo' placeholder='project Description'value ={projInfo} onChange={(e)=>{setProjInfo(prev => prev = e.target.value )}}/>
-            {/* <input className='inputs' type='text' id='projectInfo' placeholder='project Description' value={projInfo} onChange={(e)=>{setProjInfo(prev => prev = e.target.value)}}/> */}
             <input className='inputs' type='text' id='projectHours' placeholder='project Hours' value={projHours} onChange={(e)=>{setProjHours(prev => prev = e.target.value)}}/>
             <input className='inputs' type='text' id='projectType' placeholder='project Type' value={projType} onChange={(e)=>{setProjType(prev => prev = e.target.value)}}/>
             <input className='inputs' type='text' id='projectLang' placeholder='project Language' value={projLang} onChange={(e)=>{setProjLang(prev => prev = e.target.value)}}/>
-            {/* <label htmlFor='projectInfo'>ProjectInfo</label> */}
             <input className='submit' type='submit' id='submitButton' onClick={handleAddProject}/>
         </form>
     </div>

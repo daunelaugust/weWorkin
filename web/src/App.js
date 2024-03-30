@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import HomePage from "./HomePage.js"; // Import the HomePage component
 import LoginPage from './pages/LoginPage.js';
 import Navbar from "./components/Navbar.js";
+import Projects from './Projects/Projects.jsx'
 function App() {
   return (
     <div className="App">
@@ -14,7 +15,8 @@ function App() {
           <Route path="/" element={<HomePage />} />{" "}
           <Route path="/addproject" element={<AddProject />} />
           <Route path="/loginpage" element={<LoginPage />} />
-        </Routes>
+          <Route path ='/projects'element={<Projects />} />
+>        </Routes>
       </BrowserRouter>
     </div>
   );
