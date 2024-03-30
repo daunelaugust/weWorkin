@@ -7,7 +7,7 @@ export default function AddProject() {
   const[projType, setProjType] = useState('')
   const[projHours, setProjHours] = useState('')
   const[projLang, setProjLang] = useState('')
-  const addURL = `https://5e39-173-220-39-122.ngrok-free.app/projects`
+  const addURL = `https://5e39-173-220-39-122.ngrok-free.app/API/projects`
   // const[formData, setFormdata] = useState({
   //   projName,
   //   projinfo,
@@ -15,7 +15,8 @@ export default function AddProject() {
   //   hoursExp,
   //   type
   // })
-  
+
+    
   let handleAddProject = async (e) => {
     e.preventDefault(true)
     // let formData = {
@@ -33,7 +34,7 @@ export default function AddProject() {
     try{
       const response = await fetch (addURL, {
         method: 'post',
-        // mode: 'cors',
+        mode: 'cors',
         headers: {
             "Content-Type": "application/json",
         },
