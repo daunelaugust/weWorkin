@@ -74,3 +74,6 @@ class Apply(Resource):
 #     def post(self):
 #         """Returns 'Hello, World!'"""
 #         return {"hello": "world"}
+
+if __name__ == "__main__":
+    app.run(debug=True, use_reloader=False)
