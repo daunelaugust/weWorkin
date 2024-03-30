@@ -1,30 +1,12 @@
 from flask import Flask, request
+from flask_cors import CORS
 from flask_restx import Api, Resource, fields
 
 from utils import *
 
 app = Flask(__name__)
+CORS(app)
 api = Api(app, version="1.0", title="API Title", description="A simple API")
-
-ns = api.namespace("API", description="API Routes")
-
-# template for Auth0
-app = Flask(__name__)
-api = Api(app, version="1.0", title="API Title", description="A simple API")
-
-# oauth = OAuth(app)
-
-# auth0 = oauth.register(
-#     "auth0",
-#     client_id=os.environ.get("AUTH0_CLIENT_ID"),
-#     client_secret=os.environ.get("AUTH0_CLIENT_SECRET"),
-#     api_base_url="https://YOUR_DOMAIN",
-#     access_token_url="https://YOUR_DOMAIN/oauth/token",
-#     authorize_url="https://YOUR_DOMAIN/authorize",
-#     client_kwargs={
-#         "scope": "openid profile email",
-#     },
-# )
 
 ns = api.namespace("API", description="API Routes")
 
