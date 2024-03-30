@@ -53,12 +53,11 @@ class ProjectById(Resource):
             api.abort(404, f"Project {id} not found")
 
 
-@ns.route("/apply")
+@ns.route("/apply/<int:id>")
 class Apply(Resource):
-    def post(self):
-        project_id = request.json.get("<int:id>")
+    def post(self, id):
         projects = fileReader("data/projects.json")
-        project = next((proj for proj in projects if proj["id"] == project_id), None)
+        project = next((proj for proj in projects if proj["id"] == id), None)
         if project:
             fileWriter("data/myprojects.json", project)
         else:
