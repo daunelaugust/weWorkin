@@ -1,13 +1,8 @@
 [
   {
-    "name": "Project Y",
-    "description": "An innovative solution for data analysis",
-    "languages": ["Python"],
-    "frameworks": ["Django", "React"],
-    "databases": ["PostgreSQL"],
-    "deployment": ["Docker", "Kubernetes"],
-    "collaborators": 3,
-    "status": "active",
-    "dateAdded": "2024-03-29"
+    "dateStarted": "2019-01-01",
+    "dateEnded": "2019-01-31",
+    "status": "completed",
+    "id": 1
   }
 ]
