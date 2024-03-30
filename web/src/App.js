@@ -1,6 +1,6 @@
 import './App.css';
 import AddProject from './AddProjects/AddProject.jsx';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
