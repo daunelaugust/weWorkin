@@ -30,7 +30,7 @@ ns = api.namespace("API", description="API Routes")
 
 
 # Define the model for your project data
-project_model = api.model(
+json_model = api.model(
     "project",
     {},
 )
@@ -50,11 +50,12 @@ class Projects(Resource):
         projects = fileReader("data/projects.json")
         return projects
 
-    @api.expect(project_model)
+    @api.expect(json_model)
     def post(self):
         content = request.get_data(as_text=True)
-        return content
-        # fileWriter("data/projects.json", content)
+        project = json.loads(content)
+        fileWriter("data/projects.json", project)
+        return {"status": "success"}
 
 
 @ns.route("/projects/<int:id>")
