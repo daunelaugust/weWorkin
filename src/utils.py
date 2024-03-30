@@ -17,12 +17,12 @@ def fileReader(filename):
 def fileWriter(filename, content):
     if filename and content:
         # Read the existing JSON data from the f
-        with open(filename, 'r') as f:
+        with open(filename, "r") as f:
             data = json.load(f)
-    
+
         data.append(content)
-    
-        with open(filename, 'w') as f:
+
+        with open(filename, "w") as f:
             json.dump(data, f, indent=4)
     else:
         print("Invalid filename or content")
