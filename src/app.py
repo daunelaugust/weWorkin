@@ -52,20 +52,16 @@ class ProjectById(Resource):
             api.abort(404, f"Project {id} not found")
 
 
-ns.route("/apply")
-
-
+@ns.route("/apply")
 class Apply(Resource):
     def post(self):
-        project_id = request.json.get("<int:id>") 
+        project_id = request.json.get("<int:id>")
         projects = fileReader("data/projects.json")
         project = next((proj for proj in projects if proj["id"] == project_id), None)
         if project:
             fileWriter("data/myprojects.json", project)
         else:
             api.abort(404, f"Project {id} not found")
-
-
 
 
 # @ns.route("/login")
@@ -78,7 +74,3 @@ class Apply(Resource):
 #     def post(self):
 #         """Returns 'Hello, World!'"""
 #         return {"hello": "world"}
-
-
-if __name__ == "__main__":
-    app.run(debug=True, use_reloader=False)
